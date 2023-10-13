@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Car & Parts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="navbar">
+		<div class="logo">Car & Parts</div>
+		<a link href="index.html">Home</a>
+		<a href="#" id="post-ad-button">Post Ad</a>
+		<a href="#" id="post-review-button">Reviews</a>
+    <input id ="search-in" name= "search"><br><br>
+    <button id="search-btn">Search</button> 
+	</div>
+  <div class="select">
+    <button>Choose</button>
+    <div class="select-content">
+      <a href="#" id="showpartsad">Car Parts</a>
+      <a href="#" id="showcarsad">Car</a>
+    </div>
+  </div>
+  <div id="data">
+  </div>
+   <div id="post" class="post">
+    <div class="adpost">
+      <span class="close">&times;</span>
+      <form id="adbox" enctype="multipart/form-data" action="/api">
+        <h2>Car Ad</h2>
+        <button id="partad">Car-Part Ad</button>
+        <label for="text">Car name:</label>
+        <input type="text" id="text" name="text"><br><br>
+        <label for="other">Car Description:</label>
+        <input type="text" id="other" name="other"><br><br>
+        <label for ="price">Car Price</label>
+        <input type="text" id="price" name = "price" value="£"><br><br>
+        <label for="image"> Car Images:</label>
+        <input type="file" id="image" name="image" onchange="photo(event)"><br><br>
+        <div id="preview">
+          <img id="preview-image" src="" alt="Preview Image">
+        </div>
+        <button type="submit" id="submit">Submit</button>
+      </form>
+    </div>
+   </div>    
+  <div id="data5">
+  </div>
+  <div id="post2" class="post">
+    <div class="adpost">
+      <span class="close">&times;</span>
+      <form id="car-part-ad-form" enctype="multipart/form-data" action="/api/part">
+        <h2>Car Part Ad</h2>
+        <button id="carad">Car Ad</button>
+        <label for="text">Part name:</label>
+        <input type="text" id="text1" name="text1"><br><br>
+        <label for="other">Part Description:</label>
+        <input type="text" id="other1" name="other1"><br><br>
+        <label for="price">Part Price</label>
+        <input type="text" id="price1" name="price1" value="£"><br><br>
+        <label for="image">Part Images:</label>
+        <input type="file" id="image1" name="image1" onchange="photo(event)"><br><br>
+        <div id="preview">
+          <img id="preview-image" src="" alt="Preview Image">
+        </div>
+        <button type="submit" id="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+  </div>
+  
+  <form id="reviews-form" method="POST" action="/api/reviews">
+    <div id="reviews">
+      <h3>Reviews</h3>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" value="Name:"><br><br>
+      <label for="review">Review:</label>
+      <input type="text" id="review" name="review" value="Review:"><br><br>
+      <button type="submit" id="submit">Submit</button>
+    </div>
+  </form>
+  
+  <script src="cleint.js"></script>
+</body>
+</html>
